@@ -1,0 +1,27 @@
+﻿@page
+@model WebApplication3.Pages.netflix.usersModel
+@*
+   
+*@
+<h1>NETFLIX PROFILE INFO</h1>
+<h3>Number of profiles in this account @Model.users.Count()</h3>
+
+<div class="card">
+    @foreach(var user in Model.users){
+     var photoPath = "~/images/" + (user.Photopath ?? "no-profile-photo.png");
+   
+    <div class="card m-3" style="width:auto; height:auto;">
+        <div class="card-header">
+            <h3>@user.username</h3>
+        </div>
+        <img src="@photoPath"  />
+
+        <div class="card-footer text-center">
+            <a href="#" class="btn btn-primary m-1">edit</a>
+            <a href="#" class="btn btn-primary m-1">delete</a>
+        </div>
+  
+    </div>
+    
+    }
+</div>

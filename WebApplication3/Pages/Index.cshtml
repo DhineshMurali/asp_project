@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<style>
+    h1 {
+        color: black;
+        font-family: sans-serif;
+    }
+
+body { 
+    background-color: grey; 
+       background-image: url("https://images.financialexpress.com/2019/05/cats-718.jpg"); 
+       background-repeat: no-repeat;
+       background-size:cover;
+       
+}
+
+    h5 {
+        font-style: italic;
+    }
+</style>
+<div class="text-center">
+    <strong><h1 class="display-4">WELCOME TO OTT</h1></strong>
+    <h5>USERNAME :<input id="Text1" type="text" required /></h5><br />
+    <h5>PASSWORD :<input id="Password1" type="password" required /></h5><br />
+    <form action="/Selection"><input id="Submit1" type="submit" value="LOGIN" /><br /></form>
+    do not have a account? <a href="/signup">click here</a>
+</div>
